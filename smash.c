@@ -21,7 +21,6 @@ void printball(){
 
         while(fgets(chunk, sizeof(chunk), fp) != NULL){
                 fputs(chunk, stdout);
-                //fputs("|*\n", stdout);
         }
         printf("\n");
         fclose(fp);
