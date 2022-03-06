@@ -10,7 +10,6 @@ Winner algorithm:
  - if terrain is water, speed difference is reduced by 50%
 
 Sample Run:
-
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣴⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣦⣾⢟⢁⡄⠀⠀⠀⠀⠀⠀⠀⢀⡤⠂⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⢟⣿⣿⣾⠟⠁⠀⣠⣾⠀⠀⠀⢠⣿⠄⠀⠀⠀⠀
@@ -27,22 +26,22 @@ Sample Run:
 ⠀⠀⠻⠿⢿⣿⣿⣿⣇⣀⣀⣤⣴⣾⣿⣿⣿⣿⣿⣿⠶⠄⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠙⠛⠛⠻⠟⠛⠿⠿⠿⢿⣷⣤⡾⠯⠁⠀
 
-Enter Player 1:Mario
+Enter Player 1:Pikachu
 Enter Player 2:Peach
 
- Mario
+ Pikachu
  vs Peach
  
 
 
-Mario:
-tier: E
-weight: 98.000000
-airspeed: 1208.000000
-falling speed: 1500.000000
-fastfall: 2400.000000
-dash: 1936.000000
-runspeed: 1760.000000
+Pikachu:
+tier: B
+weight: 79.000000
+airspeed: 957.000000
+falling speed: 1550.000000
+fastfall: 2480.000000
+dash: 1980.000000
+runspeed: 2039.000000
 
 Peach:
 tier: D
@@ -53,10 +52,11 @@ fastfall: 1904.000000
 dash: 1826.000000
 runspeed: 1595.000000
 
-Peach outranks Mario in class
-Mario has 9.0 lbs on Peach
-Type of combat (1 for armed, 0 for unarmed):0
-Type of terrain (1 - earth, 2 - air, 3 - fire, 4 - water)4
+Pikachu outranks Peach in class
+Peach has 10.0 lbs on Pikachu
+Type of combat (1 for armed, 0 for unarmed):1
+Type of terrain (1 - earth, 2 - air, 3 - fire, 4 - water)2
 
-armed: 0, terrain: 4
-Mario wins this round!
+armed: 1, terrain: 2
+wdiff: -1.2 , sdiff: 9
+Pikachu wins this round!
