@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include <stdlib.h>
 #include<assert.h>
-#include "linkedlist.h"
+#include "mylist.h"
 #include <string.h>
 struct fighter{
         
@@ -21,6 +21,7 @@ void printball(){
 
         while(fgets(chunk, sizeof(chunk), fp) != NULL){
                 fputs(chunk, stdout);
+                //fputs("|*\n", stdout);
         }
         printf("\n");
         fclose(fp);
@@ -29,23 +30,24 @@ void printball(){
 int comp(struct fighter *p1,struct fighter *p2, char armed, char terrain){
         int speed1 = p1 -> runspeed + p1 ->dash;
         int speed2 = p2 -> runspeed + p2 -> dash;
-        int sdiff = (speed1 - speed2)/100; // positive if player 1 is faster
+        int tierdiff = 5*(p1->tier - p2->tier);// positive if p2 is higher
+        int sdiff = (speed1 - speed2)/100 - (tierdiff); // positive if player 1 is faster
         float weight1 = p1-> weight;
         float weight2 = p2 -> weight;
         float wdiff = weight1 - weight2; // positive if player 1 is heavier
-        if(armed == 1){
+        if(armed == '1'){
                 wdiff *= .5;
                 sdiff *= 2;
         }
         
-        if(terrain == 2){
+        if(terrain == '2'){
                 wdiff *= .25;
-                sdiff = (p1->airspeed - p2->airspeed)/100;
+                sdiff = (p1->airspeed - p2->airspeed)/100 - tierdiff;
         }
-        else if(terrain == 4){
+        else if(terrain == '4'){
                 sdiff *= .5;
         }
-
+        printf("wdiff: %.1f , sdiff: %d\n", wdiff, sdiff);
         return wdiff + sdiff;
 }
 
