@@ -1,6 +1,13 @@
 # SmashStatCalculator
-A calculator that will give you a stats-based prediction of the winner of a smash bros brawl
-User inputs two characters by name, as well as the nature of the brawl (unarmed/armed), and the type of terrain, and the program will compute a likely winner based on weight, airspeed, falling speed, fastfall, dash, and ground speed
+A calculator that will give you a stats-based prediction of the winner of a smash bros brawl.
+
+Asks for a total of four user inputs: 2 character names (string), as well as the nature of the brawl (boolean unarmed/armed), and the type of terrain (ints 1-4), and the program will compute a likely winner based on the characters' associated weight, airspeed, falling speed, fastfall, dash, and ground speed.
+
+Winner algorithm:
+ - final product is the sum of weight difference + avg speed difference/100
+ - if battle is armed, weight difference is reduced by 50% to account for weapons
+ - if terrain is air, only air speed and falling speed are taken into account when calculating speed difference
+ - if terrain is water, speed difference is reduced by 50%
 
 Sample Run:
 
